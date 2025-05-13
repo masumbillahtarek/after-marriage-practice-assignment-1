@@ -1,0 +1,25 @@
+*{
+    font-family: "Mulish", sans-serif;
+}
+/* Header Part */
+header{
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav>div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+nav>ul{
+    display: flex;
+    gap: 15px;
+    align-items: center; 
+   list-style: none;
+}
+nav>ul>li>a{
+    text-decoration: none;
+}
