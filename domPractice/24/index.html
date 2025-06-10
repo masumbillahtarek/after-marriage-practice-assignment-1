@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        li{
+            color: blue;
+        }
+        .text-center{
+    background-color: rgb(165, 42, 93) ;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+<h1>Welcome to my dom</h1>
+    </header>
+    <main id="main-container">
+<section>
+    <h1>My Awesome Dom</h1>
+<ul>
+    <li>Alamot</li>
+    <li>Jalamoy</li>
+    <li>Kalamoy</li>
+    <li>Salamoy</li>
+</ul>
+</section>
+<section class="fruits-container">
+    <h1 >Fruits I like</h1>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Jack-Fruit</li>
+        <li>Orange</li>
+    </ul>
+</section>
+<section id="place-container" class="motin totin lotin">
+    <h1 id="place-title" class="alim jalim solim molin">Places I like to visit</h1>
+    <ul>
+        <li class="place-name">Sundarban</li>
+        <li class="place-name">Cox-Bazar</li>
+        <li class="place-name">Kaptai Lake</li>
+        <li class="place-name">Meghna Beach</li>
+    </ul>
+</section>
+    </main>
+    <footer>
+
+    </footer>
+  
+    <script>
+       // console.log(document)      {1}
+         //console.log(document.body)    {2}
+    let liCollection=document.getElementsByTagName('li');     // {3}
+    //console.log(liCollection) ;   
+    for(const li of liCollection) {
+       // console.log(li.innerText)             // {4}
+    }
+    let headCollection=document.getElementsByTagName('h1');
+    for(const head of headCollection){
+       // console.log(head.innerText)
+    }
+
+    let placeTitle=document.getElementById('place-title');   // {5}
+    console.log(placeTitle.innerText)
+    placeTitle.innerText='My Favourite Places';
+
+    let placeName=document.getElementsByClassName('place-name');    // {6}
+    //console.log(placeName)
+    for(const place of placeName){
+        console.log(place.innerText)
+    }
+
+    let fruitsContainer=document.querySelectorAll('.fruits-container li');  // {7}
+    //console.log(fruitsContainer);
+    for(const fruit of fruitsContainer){
+        console.log(fruit);
+    }
+      console.log('---------------');
+let fruitsContaine=document.querySelector('.fruits-container li');   // {8}
+    console.log(fruitsContaine);
+
+    let placeTitle1=document.getElementById('place-title');
+    placeTitle1.style.backgroundColor='yellow'  // {9}
+    console.log(placeTitle1.getAttribute('class'))  // {10}
+    console.log(placeTitle1.classList);  // {11}
+    placeTitle1.classList.remove('solim')  // {12}
+    console.log(placeTitle1.classList);
+      placeTitle1.classList.add('kolim')   // {13}
+        console.log(placeTitle1.classList);
+        placeTitle1.setAttribute('title','I Go To school')  // {14}
+    let fruitContainer1=document.getElementsByClassName('fruits-container')[0].innerHTML//{15}
+        console.log(fruitContainer1)
+    </script>
+    <script src="append.js"></script>
+      <script src="script.js"></script>
+      
+</body>
+</html>

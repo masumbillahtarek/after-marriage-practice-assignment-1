@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section>
+     <h1>Dom Special Events </h1>
+     <!--1-->
+    <button onclick="console.log('I go to school')">Click Me</button>
+      <!--2-->
+    <button onclick="add()">Click Me</button>
+      <!--3-->
+    <button id="make-blue">Make Blue</button>
+      <!--4-->
+    <button id="make-purple">Make Purple</button>
+      <!--5-->
+    <button id="make-pink">Make Pink</button>
+      <!--6-->
+    <button id="make-green">Make Green</button>
+      <!--7-->
+    <button id="make-goldenrod">Make Goldenrod</button>
+</section>
+<section id="handler-section">
+    <h1>Final Dom Event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <p id="handler-status2">Default Input Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br><br>
+    <button onclick="handleOnClick()">Handle Event By add onclick Function</button>
+    <button id="event-listener">Handle Event By add Event Listener</button>
+</section>
+<section>
+    <h1>Please add your comment</h1>
+    <div id="comment-container">
+        <p>I am masum Billah Tarek</p>
+        <p>I am Alim</p>
+        <p>I am Salim</p>
+    </div>
+    <div class="text-container">
+        <textarea name="" id="text-box" cols="30" rows="10"></textarea>
+        <button id="text-btn">Click Here</button>
+    </div>
+</section>
+<section>
+    <h1 id="head-text">Explore More Events</h1>
+    <input id="text-field" type="text">
+    <button id="btn-more" disabled>Events</button>
+</section>
+<section id="event-section">
+    <h1>Explore Event Bubble</h1>
+    <ul id="event-item">
+        <li id="item-1">item-1</li>
+        <li id="item-2">item-2</li>
+        <li id="item-3">item-3</li>
+        <li id="item-4">item-4</li>
+        <li id="item-5">item-5</li>
+    </ul>
+</section>
+<section id="event-delegate-section">
+    <h1>Explore Event Delegate</h1>
+    <ul id="event-delegate-item">
+        <li class="item">item-1</li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+        <li class="item">item-5</li>
+    </ul> 
+    <br>
+    <button id="btn-add-item">Add Item</button>
+</section>
+<script>
+    /*
+const eventDelegateItems=document.getElementsByClassName('item');
+for(const eventDelegateItem of eventDelegateItems){
+    eventDelegateItem.addEventListener('click',function(event){
+       // console.log(eventDelegateItem)
+         //console.log(event.target.parentNode) 
+         event.target.parentNode.removeChild(event.target)
+    })
+} 
+    */
+   document.getElementById('event-delegate-item').addEventListener('click',function(event){
+    event.target.parentNode.removeChild(event.target)
+   })
+
+document.getElementById('btn-add-item').addEventListener('click',function(){
+    const delegateItem=document.getElementById('event-delegate-item');
+    const li=document.createElement('li');
+    li.innerText='My Dear Sumaiya';
+    li.classList.add('item')
+    delegateItem.appendChild(li)
+})
+</script>
+    <script src="script.js"></script>
+    <script src="comment.js"></script>
+    <script src="event-bubble.js"></script>
+    <script src="delete.js"></script>
+</body>
+</html>
